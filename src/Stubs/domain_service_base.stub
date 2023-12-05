@@ -1,0 +1,47 @@
+<?php
+
+namespace %namespace%\Domain;
+
+use Exception;
+use Npc\Entity\Base;
+
+class BaseService
+{
+    /**
+     * 默认资源查询器
+     * @param string $resource_uri
+     * @param Base $params
+     * @return mixed
+     * @throws Exception
+     */
+    public function query(string $resource_uri, Base $params)
+    {
+        list($domain,$action) = explode('/',str_replace('_','',trim(ucwords($resource_uri,'/_'),'/')));
+        $service = '%namespace%\Domain\\'.$domain.'\\'.$domain.'Service';
+        $repository = '%namespace%\Domain\\'.$domain.'\\'.$domain.'Repository';
+        $model = '%namespace%\Model\\'.$domain;
+
+        //仓储层
+        if(class_exists($repository))
+        {
+            //仓储层服务
+            $repository = new $repository();
+            if(method_exists($repository,$action))
+            {
+                return $repository->$action($params->toArray());
+            }
+        }
+        //查询Model
+        if(class_exists($model))
+        {
+            //DB
+            $model = new $model();
+            if(method_exists($model,$action))
+            {
+                return $model->$action($params->toArray());
+            }
+        }
+
+        throw new Exception('资源访问点：'.$resource_uri.' 不存在！');
+    }
+}

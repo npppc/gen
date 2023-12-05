@@ -1,0 +1,21 @@
+<?php
+
+namespace %namespace%\Domain\%class%;
+
+use Npc\DDD\Domain\Repository;
+%use%
+
+/**
+ * Class %class%Repository
+ * @package %namespace%\Domain\%class%
+ */
+class %class%Repository extends Repository
+{
+    use \Npc\DDD\Traits\Repository;
+
+    public function __construct()
+    {
+        $this->dao = new %class%();
+        $this->entity = new %class%Entity();
+    }
+}

@@ -1,0 +1,25 @@
+<?php
+
+namespace %namespace%\Application\Service;
+
+use Exception;
+use %namespace%\Domain\%class%\%class%Service as domainService;
+#use#
+%use%
+
+/**
+ * Class %class%Service
+ * @package %namespace%\Application\Service
+ */
+class %class%Service extends Base
+{
+    public function __construct()
+    {
+        parent::__construct();
+
+        $this->domainService = new domainService();
+    }
+
+    #methods#
+    %methods%
+}

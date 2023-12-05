@@ -1,0 +1,15 @@
+<?php
+
+namespace %namespace%\Application\Service;
+
+use %namespace%\Domain\BaseService;
+
+class Base
+{
+    public $domainService = null;
+
+    public function __construct()
+    {
+        $this->domainService = new BaseService();
+    }
+}

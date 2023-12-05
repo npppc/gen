@@ -1,0 +1,19 @@
+<?php
+
+namespace %namespace%\Application\Request;
+
+use Exception;
+use Npc\DDD\Application\Request;
+use Npc\DDD\Domain\Entity;
+
+class Base extends Request
+{
+    /**
+     * @return Entity
+     * @throws Exception
+     */
+    public function toDomainEntity()
+    {
+        return new Entity($this->toArray());
+    }
+}

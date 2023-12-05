@@ -1,0 +1,18 @@
+<?php
+
+namespace %namespace%\Application\Request;
+
+%use%
+
+/**
+ * %method_name%
+ * Class %request%
+ * @package %namespace%\Application\Request
+%property%
+ */
+class %request% extends Base
+{
+    public $_rules = [
+        %rules%
+    ];
+}

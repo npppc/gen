@@ -1,0 +1,49 @@
+<?php
+
+namespace %namespace%\Model;
+
+use \Exception;
+use \Npc\Helper\Phalcon\QueryBuilder as QueryBuilderHelper;
+
+/**
+ * Class %class%
+ * @package %namespace%\Model
+ */
+class %class% extends %class%Model
+{
+    public function getResourceName() : string
+    {
+        return '%resource_name%';
+    }
+
+    /**
+     * 获取查询助手
+     * @param array $params
+     * @return QueryBuilderHelper
+     */
+    public function getQueryBuilder(array $params = [])
+    {
+//
+//        $helper = new QueryBuilderHelper($this->modelsManager->createBuilder());
+//        $helper->setSortedFields([
+//            'id' => 'a.id',
+//        ]);
+//        $helper->setDefaultOrderBy('a.id desc');
+//        $helper->addFrom('%namespace%\Model\%class%','a');
+//        $helper->columns(
+//            '
+//                a.id,
+//                a.name
+//                ');
+//        $helper->setSearch([
+//            'id' => ['a.id','in'],
+//            'ids' => ['a.id','set'],
+//            'name' => ['a.name','like'],
+//            'date_start' => ['a.date','>=','date'],
+//            'date_end' => ['a.date','<=','date'],
+//            'amount_from' => ['a.amount','>='],
+//            'amount_to' => ['a.amount','<='],
+//        ]);
+//        return $helper;
+    }
+}

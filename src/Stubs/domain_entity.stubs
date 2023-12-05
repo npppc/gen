@@ -1,0 +1,15 @@
+<?php
+
+namespace %namespace%\Domain\%class%;
+
+use Npc\DDD\Domain\Entity;
+
+/**
+ * Class %class%Entity
+ * @package %namespace%\Domain\%class%
+%property%
+ *
+ */
+class %class%Entity extends Entity
+{
+}

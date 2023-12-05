@@ -1,0 +1,22 @@
+<?php
+
+namespace %namespace%\Model;
+
+use Npc\Helper\Phalcon\Model\ModelResource;
+
+/**
+ * Class %class%Model
+ * @package %namespace%\Model
+%property%
+ *
+ */
+class %class%Model extends ModelResource
+{
+    %properties%
+
+    public function initialize()
+    {
+        $this->useDynamicUpdate(true);
+        $this->setSource("%source%");
+    }
+}

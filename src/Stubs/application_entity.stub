@@ -1,0 +1,13 @@
+<?php
+
+namespace %namespace%\Application\Entity;
+
+use Npc\DDD\Application\Entity;
+
+/**
+%property%
+ */
+class %entity% extends Entity
+{
+%sets%
+}

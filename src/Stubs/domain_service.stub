@@ -1,0 +1,19 @@
+<?php
+
+namespace %namespace%\Domain\%class%;
+
+use Exception;
+use Npc\DDD\Domain\Entity;
+use %namespace%\Domain\BaseService;
+#use#
+%use%
+
+/**
+ * Class %class%Service
+ * @package %namespace%\Domain\%class%
+ */
+class %class%Service extends BaseService
+{
+    #methods#
+    %methods%
+}
