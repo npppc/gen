@@ -7,7 +7,6 @@ use Npc\Gen\Entity\Config;
 use Npc\Helper\Phalcon\Mysql;
 use Cake\Collection\Collection;
 use Phalcon\Loader;
-use phpDocumentor\Reflection\Types\Self_;
 
 class Gen
 {
@@ -142,7 +141,6 @@ class Gen
         @mkdir($this->config->applicationPath);
         @mkdir($this->config->domainPath);
         @mkdir($this->config->modelPath);
-
 
         $loader = new Loader();
         $loader->registerNamespaces([
