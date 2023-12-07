@@ -6,7 +6,6 @@
         "npppc/entity": "dev-master",
         "npppc/helper": "dev-master",
         "npppc/ddd": "dev-master",
-        "cakephp/collection": "v4.5",
         "guzzlehttp/guzzle": "^7.8",
         "firebase/php-jwt": "^6.9"
     },
